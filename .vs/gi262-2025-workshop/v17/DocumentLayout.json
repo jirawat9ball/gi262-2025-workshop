@@ -1,12 +1,105 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\oop\\oopplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\oop\\oopplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\dialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\dialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\skillbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\skillbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 209,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OOPPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\OOP\\OOPPlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\OOP\\OOPPlayer.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\OOP\\OOPPlayer.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\OOP\\OOPPlayer.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T09:15:03.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SkillBook.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwCoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T09:05:42.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Skill.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\Skill.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\Skill.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\Skill.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\Skill.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAA5wEAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T09:04:49.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dialogue.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\Dialogue.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\Dialogue.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\Dialogue.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\Dialogue.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T09:04:18.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DialogueManager.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\DialogueManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\DialogueManager.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\DialogueManager.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\DialogueManager.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T14:04:55.325Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
