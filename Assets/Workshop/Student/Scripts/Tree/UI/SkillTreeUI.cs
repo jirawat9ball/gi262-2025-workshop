@@ -139,6 +139,10 @@ public class SkillTreeUI : MonoBehaviour
         }
     }
 
+    public void CloseUI() { 
+        gameObject.SetActive(false);
+    }
+
     // อาจเพิ่ม Logic สำหรับการวาดเส้นเชื่อมต่อ (Lines) ระหว่าง Node ได้ที่นี่
     // ซึ่งต้องใช้ Component เช่น UILineRenderer หรือ UI.Graphic ที่กำหนดเอง
 }

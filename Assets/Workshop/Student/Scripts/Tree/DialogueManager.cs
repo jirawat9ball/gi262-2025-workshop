@@ -25,7 +25,6 @@ using UnityEngine;
 
             LoadConversations();
 
-           
         }
 
         private void LoadConversations()
@@ -98,8 +97,8 @@ using UnityEngine;
             else
             {
                 // ถ้าไม่มีตัวเลือกถัดไป ถือว่าจบบทสนทนา
-                dialogueUI.ShowDialogue(currentNode); // แสดงข้อความสุดท้าย
-                dialogueUI.ShowCloseButtonDialog();                                      // อาจเพิ่ม Delay และเรียก dialogueUI.HideDialogue() ที่นี่
+                dialogueUI.ShowDialogue(currentNode);   // แสดงข้อความสุดท้าย
+                dialogueUI.ShowCloseButtonDialog();    // อาจเพิ่ม Delay และเรียก dialogueUI.HideDialogue() ที่นี่
                                                       // หรือทำให้ปุ่ม "ปิด" แสดงขึ้นมา
             }
         }

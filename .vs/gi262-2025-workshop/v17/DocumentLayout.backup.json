@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\ui\\skilltreeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\ui\\skilltreeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\skillbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\skillbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\oop\\oopmapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\oop\\oopmapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\oop\\oopmapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\oop\\oopmapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\npcskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\npcskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,33 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 209,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OOPMapGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\OOP\\OOPMapGenerator.cs",
-              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\OOP\\OOPMapGenerator.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\OOP\\OOPMapGenerator.cs",
-              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\OOP\\OOPMapGenerator.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAuwHUAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T12:55:07.136Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NPC.cs",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\NPC.cs",
-              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\NPC.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\NPC.cs",
-              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\NPC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T12:51:32.447Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -57,9 +44,74 @@
               "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\DialogueManager.cs",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\DialogueManager.cs",
               "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\DialogueManager.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAYwDIAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T11:22:40.702Z",
+              "WhenOpened": "2025-10-02T14:04:55.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SkillTreeUI.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\UI\\SkillTreeUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\UI\\SkillTreeUI.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\UI\\SkillTreeUI.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\UI\\SkillTreeUI.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAA1wDEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T14:03:21.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SkillBook.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T14:03:15.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NPC.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\NPC.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\NPC.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\NPC.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\NPC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T13:58:17.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NPCSkill.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\NPCSkill.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\NPCSkill.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\NPCSkill.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\NPCSkill.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T13:53:52.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OOPMapGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\OOP\\OOPMapGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\OOP\\OOPMapGenerator.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\OOP\\OOPMapGenerator.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\OOP\\OOPMapGenerator.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAuwHYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:55:07.136Z",
               "EditorCaption": ""
             }
           ]
