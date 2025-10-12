@@ -1,17 +1,17 @@
-using UnityEngine;
-using UnityEditor;
-using UnityEditor.TestTools.TestRunner.Api;
-using System.Collections.Generic;
-using System.Linq;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using Assignment.Core;
 using Assignment.Core.DI;
 using Assignment.Core.Interfaces;
 using AssignmentSystem.Services;
-using System.IO;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using System.Reflection;
-using Assignment.Core;
+using UnityEditor;
+using UnityEditor.TestTools.TestRunner.Api;
+using UnityEngine;
 
 namespace Assignment.UI
 {

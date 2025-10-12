@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-    public class DialogueManager : MonoBehaviour
+    public class DialogueSequen : MonoBehaviour
     {
         public DialogueTree tree;
         public DialogueNode currentNode;
@@ -11,17 +11,6 @@ using UnityEngine;
 
         public void Start()
         {
-            // ตรวจสอบ UI และตั้งค่า
-            if (dialogueUI == null)
-            {
-                dialogueUI = GetComponent<DialogueUI>();
-                if (dialogueUI == null)
-                {
-                    Debug.LogError("DialogueUI component is missing!");
-                    return;
-                }
-            }
-            dialogueUI.Setup(this);
 
             LoadConversations();
 

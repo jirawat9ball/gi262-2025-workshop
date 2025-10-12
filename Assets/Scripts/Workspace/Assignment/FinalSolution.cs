@@ -1,178 +1,166 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using Debug = AssignmentSystem.Services.AssignmentDebugConsole;
 
 namespace Assignment
 {
     public class FinalSolution : IAssignment
     {
+        class Action
+        {
+            public string Name;
+            public int Value;
+        }
+
         #region Lecture
 
-        public void LCT01_SequentialSearch1DArray()
+        public void LCT01_StackSyntax()
         {
-            int[] array = new int[] { 34, 21, 56, 12, 78, 90, 11, 23 };
-            int target = 90;
-            int index = -1;
+            Stack<int> stack = new Stack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            Debug.Log($"Count: {stack.Count}");
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i] == target)
-                {
-                    index = i;
-                    break;
-                }
-            }
+            var popped = stack.Pop();
+            Debug.Log($"Popped: {popped}");
 
-            Debug.Log(index);
+            var top = stack.Peek();
+            Debug.Log($"Peek: {top}");
+            Debug.Log($"Count after peek: {stack.Count}");
         }
 
-        public void LCT02_SequentialSearch2DArray()
+        public void LCT02_QueueSyntax()
         {
-            int[,] array = new int[,]
-            {
-                { 34, 21, 56 },
-                { 12, 78, 90 },
-                { 11, 23, 45 }
-            };
-            int target = 23;
-            int row = -1;
-            int col = -1;
+            Queue<int> queue = new Queue<int>();
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            Debug.Log($"Count: {queue.Count}");
 
-            for (int i = 0; i < array.GetLength(0); i++)
-            {
-                for (int j = 0; j < array.GetLength(1); j++)
-                {
-                    if (array[i, j] == target)
-                    {
-                        row = i;
-                        col = j;
-                        break;
-                    }
-                }
-                if (row != -1 && col != -1) break;
-            }
+            var dequeued = queue.Dequeue();
+            Debug.Log($"Dequeue: {dequeued}");
 
-            Debug.Log($"({row}, {col})");
+            var front = queue.Peek();
+            Debug.Log($"Peek: {front}");
+
+            Debug.Log($"Count after dequeue: {queue.Count}");
         }
 
-        public void LCT03_BinarySearch()
+        public void LCT03_ActionStack()
         {
-            int[] array = new int[] { 11, 12, 21, 23, 34, 45, 56, 78, 90 };
-            int target = 23;
-            int left = 0;
-            int right = array.Length - 1;
-            int index = -1;
+            Action action1 = new Action { Name = "Action 1" };
+            Action action2 = new Action { Name = "Action 2" };
+            Action action3 = new Action { Name = "Action 3" };
 
-            while (left <= right)
+            Stack<Action> actionStack = new Stack<Action>();
+            actionStack.Push(action1);
+            actionStack.Push(action2);
+            actionStack.Push(action3);
+
+            while (actionStack.Count > 0)
             {
-                int mid = left + (right - left) / 2;
-
-                if (array[mid] == target)
-                {
-                    index = mid;
-                    break;
-                }
-                else if (array[mid] < target)
-                {
-                    left = mid + 1;
-                }
-                else
-                {
-                    right = mid - 1;
-                }
+                var action = actionStack.Pop();
+                Debug.Log($"Executing {action.Name}");
             }
+        }
 
-            Debug.Log(index);
+        public void LCT04_ActionQueue()
+        {
+            Action action1 = new Action { Name = "Action 1" };
+            Action action2 = new Action { Name = "Action 2" };
+            Action action3 = new Action { Name = "Action 3" };
+
+            Queue<Action> actionQueue = new Queue<Action>();
+            actionQueue.Enqueue(action1);
+            actionQueue.Enqueue(action2);
+            actionQueue.Enqueue(action3);
+
+            while (actionQueue.Count > 0)
+            {
+                var action = actionQueue.Dequeue();
+                Debug.Log($"Executing {action.Name}");
+            }
         }
 
         #endregion
 
         #region Assignment
 
-        public void AS01_FindFirstAndLastElementOfArray(int[] array, int target)
+        public void ASN01_ReverseString(string str)
         {
-            int first = -1, last = -1;
-            for (int i = 0; i < array.Length; i++)
+            Stack<string> stack = new Stack<string>();
+            foreach (var c in str)
             {
-                if (array[i] == target)
-                {
-                    if (first == -1)
-                        first = i;
-                    last = i;
-                }
+                stack.Push(c.ToString());
             }
-            if (first == -1)
+            string reversed = "";
+            while (stack.Count > 0)
             {
-                Debug.Log(-1);
+                reversed += stack.Pop();
             }
+            Debug.Log(reversed);
+        }
+
+        public void ASN02_StackPalindrome(string str)
+        {
+            Stack<string> stack = new Stack<string>();
+            foreach (var c in str)
+            {
+                stack.Push(c.ToString());
+            }
+            string reversed = "";
+            while (stack.Count > 0)
+            {
+                reversed += stack.Pop();
+            }
+            bool isPalindrome = str == reversed;
+            if (isPalindrome)
+                Debug.Log("is a palindrome");
             else
-            {
-                Debug.Log(first);
-                Debug.Log(last);
-            }
-        }
-
-        public void AS02_FindMaxLessThan(int[] array, int target)
-        {
-            Array.Sort(array);
-            int result = -1;
-            foreach (var num in array)
-            {
-                if (num < target)
-                {
-                    result = num;
-                }
-                else
-                {
-                    break;
-                }
-            }
-            Debug.Log(result);
-        }
-
-        public void AS03_FindRange(int[] array, int min, int max)
-        {
-            Array.Sort(array);
-            bool found = false;
-            foreach (var num in array)
-            {
-                if (num >= min && num <= max)
-                {
-                    Debug.Log(num);
-                    found = true;
-                }
-            }
-            if (!found)
-            {
-                Debug.Log("Empty");
-            }
+                Debug.Log("is not a palindrome");
         }
 
         #endregion
 
-
         #region Extra
 
-        public void EX01_FindTargetEnemies(int[] enemyHPs, int mana)
+        public void EX01_ParenthesesChecker(string str)
         {
-            Array.Sort(enemyHPs);
-            List<int> selected = new List<int>();
-            foreach (var hp in enemyHPs)
+            Stack<char> stack = new Stack<char>();
+            foreach (char c in str)
             {
-                if (hp <= mana)
+                if (c == '(' || c == '[' || c == '{')
                 {
-                    selected.Add(hp);
-                    mana -= hp;
+                    stack.Push(c);
                 }
-                else
+                else if (c == ')' || c == ']' || c == '}')
                 {
-                    break;
+                    if (stack.Count == 0)
+                    {
+                        Debug.Log("Unbalanced");
+                        return;
+                    }
+                    char top = stack.Pop();
+                    if (!Matches(top, c))
+                    {
+                        Debug.Log("Unbalanced");
+                        return;
+                    }
                 }
             }
-            foreach (var hp in selected)
-            {
-                Debug.Log(hp);
-            }
+            if (stack.Count == 0)
+                Debug.Log("Balanced");
+            else
+                Debug.Log("Unbalanced");
+        }
+
+        private bool Matches(char open, char close)
+        {
+            return (open == '(' && close == ')') ||
+                   (open == '[' && close == ']') ||
+                   (open == '{' && close == '}');
         }
 
         #endregion

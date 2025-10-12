@@ -1,14 +1,14 @@
-using UnityEngine;
-using UnityEngine.Networking;
 using System;
-using System.Text;
 using System.IO;
 using System.Security.Cryptography;
-using Newtonsoft.Json;
+using System.Text;
 using Assignment;
+using Assignment.Core;
 using Assignment.Core.DI;
 using Assignment.Core.Interfaces;
-using Assignment.Core;
+using Newtonsoft.Json;
+using UnityEngine;
+using UnityEngine.Networking;
 
 /// <summary>
 /// API client for the assignment grading system

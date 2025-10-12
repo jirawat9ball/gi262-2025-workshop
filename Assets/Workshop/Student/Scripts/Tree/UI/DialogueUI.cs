@@ -12,21 +12,24 @@ public class DialogueUI : MonoBehaviour
     public Transform choiceContainer;
     public Button choiceButtonPrefab; // ลาก Prefab ปุ่มตัวเลือกมาใส่
     public GameObject closeButtonDialogue;
-    private DialogueManager manager;
+    private DialogueSequen InterractNpcSequen;
 
     // เก็บปุ่มที่ถูกสร้างขึ้น เพื่อนำไปทำลาย/ซ่อนในภายหลัง
     private List<Button> activeButtons = new List<Button>();
 
-    public void Setup(DialogueManager dialogueManager)
+    public void Setup(DialogueSequen sequen)
     {
-        this.manager = dialogueManager;
+        this.InterractNpcSequen = sequen;
+        DialogueNode currentNode = InterractNpcSequen.tree.root;
+        ShowDialogue(currentNode);
+
         closeButtonDialogue.SetActive(false);
+        gameObject.SetActive(true);
     }
 
     public void ShowDialogue(DialogueNode node)
     {
-        manager.currentNode = node;
-        gameObject.SetActive(true);
+        InterractNpcSequen.currentNode = node;
 
         // 1. แสดงข้อความของ NPC
         npcText.text = node.text;
@@ -69,7 +72,7 @@ public class DialogueUI : MonoBehaviour
     private void OnChoiceSelected(int index)
     {
         // ส่ง index ของตัวเลือกที่ผู้เล่นเลือกกลับไปให้ DialogueManager จัดการ
-        manager.SelectChoice(index);
+        InterractNpcSequen.SelectChoice(index);
     }
     public void ShowCloseButtonDialog() {
         closeButtonDialogue.gameObject.SetActive(true);

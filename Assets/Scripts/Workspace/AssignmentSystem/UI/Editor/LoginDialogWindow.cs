@@ -1,7 +1,7 @@
-using UnityEngine;
-using UnityEditor;
-using Assignment.Core.Interfaces;
 using Assignment.Core.DI;
+using Assignment.Core.Interfaces;
+using UnityEditor;
+using UnityEngine;
 
 namespace Assignment.UI
 {

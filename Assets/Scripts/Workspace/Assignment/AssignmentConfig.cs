@@ -5,14 +5,14 @@ namespace Assignment
         /// <summary>
         /// Name of the assignment.
         /// </summary>  
-        public const string AssignmentName = "Assignment 07";
+        public const string AssignmentName = "Assignment 09";
 
         /// <summary>
         /// Description of the assignment.
         /// </summary>
         public const string AssignmentDescription = "Searching Algorithms in Game Development";
 
-        public const string AssignmentResourceID = "bu.2025.sem-1.gi262.as07";
+        public const string AssignmentResourceID = "bu.2025.sem-1.gi262.as09";
 
         /// <summary>
         /// Version of the assignment.
@@ -32,7 +32,7 @@ namespace Assignment
         /// Checksum for the combined all assignment testcase files. This is used to verify the integrity of the assignment files.
         /// for preventing tampering or accidental changes of the assignment files.
         /// </summary>
-        public const string AssignmentTestcaseFilesChecksum = "d41d8cd98f00b204e9800998ecf8427e";
+        public const string AssignmentTestcaseFilesChecksum = "";
 
         public const string ApiBaseUrl = "https://grading-system-bu.happygocoding.com";
     }

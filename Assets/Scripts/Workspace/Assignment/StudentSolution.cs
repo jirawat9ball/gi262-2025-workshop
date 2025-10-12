@@ -1,71 +1,56 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using Debug = AssignmentSystem.Services.AssignmentDebugConsole;
 
 namespace Assignment
 {
     public class StudentSolution : IAssignment
     {
+        class Action
+        {
+            public string Name;
+            public int Value;
+        }
+
         #region Lecture
 
-        public void LCT01_SequentialSearch1DArray()
+        public void LCT01_StackSyntax()
         {
-            int[] array = new int[] { 34, 21, 56, 12, 78, 90, 11, 23 };
-            int target = 90;
-            int index = -1;
-
-            // Your code here ...
-            // ...
-
-
-            Debug.Log(index);
+            throw new NotImplementedException();
         }
 
-        public void LCT02_SequentialSearch2DArray()
+        public void LCT02_QueueSyntax()
         {
-            int[,] array = new int[,]
-            {
-                { 34, 21, 56 },
-                { 12, 78, 90 },
-                { 11, 23, 45 }
-            };
-            int target = 23;
-            int row = -1;
-            int col = -1;
-
-            // Your code here ...
-            // ...
-
-            Debug.Log($"({row}, {col})");
+            throw new NotImplementedException();
         }
 
-        public void LCT03_BinarySearch()
+        public void LCT03_ActionStack()
         {
-            int[] array = new int[] { 11, 12, 21, 23, 34, 45, 56, 78, 90 };
-            int target = 23;
-            int index = -1;
+            Action action1 = new Action { Name = "Action 1" };
+            Action action2 = new Action { Name = "Action 2" };
+            Action action3 = new Action { Name = "Action 3" };
+            throw new NotImplementedException();
+        }
 
-            // Your code here ...
-            // ...
-
-            Debug.Log(index);
+        public void LCT04_ActionQueue()
+        {
+            Action action1 = new Action { Name = "Action 1" };
+            Action action2 = new Action { Name = "Action 2" };
+            Action action3 = new Action { Name = "Action 3" };
+            throw new NotImplementedException();
         }
 
         #endregion
 
         #region Assignment
 
-        public void AS01_FindFirstAndLastElementOfArray(int[] array, int target)
+        public void ASN01_ReverseString(string str)
         {
             throw new NotImplementedException();
         }
 
-        public void AS02_FindMaxLessThan(int[] array, int target)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AS03_FindRange(int[] array, int min, int max)
+        public void ASN02_StackPalindrome(string str)
         {
             throw new NotImplementedException();
         }
@@ -74,7 +59,7 @@ namespace Assignment
 
         #region Extra
 
-        public void EX01_FindTargetEnemies(int[] enemyHPs, int mana)
+        public void EX01_ParenthesesChecker(string str)
         {
             throw new NotImplementedException();
         }

@@ -17,7 +17,9 @@ namespace Solution
             PrintInfo();
             GetRemainEnergy();
             inventory = GetComponent<Inventory>();
-
+            // Initialize the action history manager and save the starting position
+            actionHistoryManager = GetComponent<ActionHistoryManager>();
+            actionHistoryManager.SaveStateForUndo(new Vector2(positionX,positionY));
         }
 
         public void Update()
@@ -65,6 +67,7 @@ namespace Solution
             mapGenerator.MoveEnemies();
             // Save the state AFTER the move
             Vector2 newPosition = new Vector2(this.positionX, this.positionY);
+            actionHistoryManager.SaveStateForUndo(newPosition);
         }
 
         public void UseFireStorm()

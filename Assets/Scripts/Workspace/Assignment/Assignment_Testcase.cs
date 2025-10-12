@@ -1,8 +1,8 @@
-using NUnit.Framework;
-using UnityEngine;
-using AssignmentSystem.Services;
 using System.Linq;
+using AssignmentSystem.Services;
+using NUnit.Framework;
 using NUnit.Framework.Internal;
+using UnityEngine;
 
 namespace Assignment
 {
@@ -16,8 +16,8 @@ namespace Assignment
             // Reset static state before each test
             AssignmentDebugConsole.Clear();
 
-            // Use FinalSolution as the test subject
-            assignment = new FinalSolution();
+            // Use StudentSolution as the test subject
+            assignment = new StudentSolution();
         }
 
         [TearDown]
@@ -32,33 +32,43 @@ namespace Assignment
         #region Lecture
 
         [Category("Lecture")]
-        [TestCase(TestName = "LCT01_SequentialSearch1DArray", Description = "Lecture: Sequential Search in 1D Array")]
-        public void LCT01_SequentialSearch1DArray()
+        [Test]
+        public void Test_LCT01_StackSyntax()
         {
-            assignment.LCT01_SequentialSearch1DArray();
-            string expected = "5";
+            assignment.LCT01_StackSyntax();
+            string expected = "Count: 3\nPopped: 3\nPeek: 2\nCount after peek: 2";
             string actual = AssignmentDebugConsole.GetOutput().Trim();
-            Assert.AreEqual(expected, actual, $"Expected output is {expected} but actual output is {actual}");
+            TestUtils.AssertMultilineEqual(expected, actual);
         }
 
         [Category("Lecture")]
-        [TestCase(TestName = "LCT02_SequentialSearch2DArray", Description = "Lecture: Sequential Search in 2D Array")]
-        public void LCT02_SequentialSearch2DArray()
+        [Test]
+        public void Test_LCT02_QueueSyntax()
         {
-            assignment.LCT02_SequentialSearch2DArray();
-            string expected = "(2, 1)";
+            assignment.LCT02_QueueSyntax();
+            string expected = "Count: 3\nDequeue: 1\nPeek: 2\nCount after dequeue: 2";
             string actual = AssignmentDebugConsole.GetOutput().Trim();
-            Assert.AreEqual(expected, actual, $"Expected output is {expected} but actual output is {actual}");
+            TestUtils.AssertMultilineEqual(expected, actual);
         }
 
         [Category("Lecture")]
-        [TestCase(TestName = "LCT03_BinarySearch", Description = "Lecture: Binary Search")]
-        public void LCT03_BinarySearch()
+        [Test]
+        public void Test_LCT03_ActionStack()
         {
-            assignment.LCT03_BinarySearch();
-            string expected = "3";
+            assignment.LCT03_ActionStack();
+            string expected = "Executing Action 3\nExecuting Action 2\nExecuting Action 1";
             string actual = AssignmentDebugConsole.GetOutput().Trim();
-            Assert.AreEqual(expected, actual, $"Expected output is {expected} but actual output is {actual}");
+            TestUtils.AssertMultilineEqual(expected, actual);
+        }
+
+        [Category("Lecture")]
+        [Test]
+        public void Test_LCT04_ActionQueue()
+        {
+            assignment.LCT04_ActionQueue();
+            string expected = "Executing Action 1\nExecuting Action 2\nExecuting Action 3";
+            string actual = AssignmentDebugConsole.GetOutput().Trim();
+            TestUtils.AssertMultilineEqual(expected, actual);
         }
 
         #endregion
@@ -66,53 +76,32 @@ namespace Assignment
         #region Assignment
 
         [Category("Assignment")]
-        [TestCase(new int[] { 1, 2, 2, 2, 3 }, 2, new int[] { 1, 3 }, TestName = "AS01_FindFirstAndLastElementOfArray_Basic", Description = "Basic case with multiple occurrences")]
-        [TestCase(new int[] { 1, 2, 3, 4, 5 }, 6, new int[] { -1 }, TestName = "AS01_FindFirstAndLastElementOfArray_NotFound", Description = "Target not in array")]
-        [TestCase(new int[] { 5, 5, 5, 5, 5 }, 5, new int[] { 0, 4 }, TestName = "AS01_FindFirstAndLastElementOfArray_AllSame", Description = "All elements are target")]
-        [TestCase(new int[] { 1 }, 1, new int[] { 0, 0 }, TestName = "AS01_FindFirstAndLastElementOfArray_SingleElement", Description = "Single element array")]
-        [TestCase(new int[] { 1, 2, 3 }, 2, new int[] { 1, 1 }, TestName = "AS01_FindFirstAndLastElementOfArray_SingleOccurrence", Description = "Single occurrence in middle")]
-        public void Test_AS01_FindFirstAndLastElementOfArray(int[] array, int target, int[] expected)
+        [TestCase("hello", "olleh", TestName = "ASN01_ReverseString_Hello", Description = "Reverse hello")]
+        [TestCase("world", "dlrow", TestName = "ASN01_ReverseString_World", Description = "Reverse world")]
+        [TestCase("a", "a", TestName = "ASN01_ReverseString_Single", Description = "Reverse single char")]
+        [TestCase("", "", TestName = "ASN01_ReverseString_Empty", Description = "Reverse empty string")]
+        [TestCase("12345", "54321", TestName = "ASN01_ReverseString_Numbers", Description = "Reverse numbers")]
+        public void Test_ASN01_ReverseString(string str, string expected)
         {
-            assignment.AS01_FindFirstAndLastElementOfArray(array, target);
-            string output = AssignmentDebugConsole.GetOutput().Trim();
-            string[] lines = output.Split('\n');
-            int[] actual = lines.Select(int.Parse).ToArray();
-            CollectionAssert.AreEquivalent(expected, actual, $"Expected numbers {string.Join(",", expected)} but actual {string.Join(",", actual)}");
-        }
-
-        [Category("Assignment")]
-        [TestCase(new int[] { 4, 2, 10, 9, 8, 11 }, 9, "8", TestName = "AS02_FindMaxLessThan_Basic", Description = "Basic case")]
-        [TestCase(new int[] { 4, 2, 10, 9, 8, 11 }, 2, "-1", TestName = "AS02_FindMaxLessThan_NoLess", Description = "No value less than target")]
-        [TestCase(new int[] { 1, 2, 3, 5, 6 }, 5, "3", TestName = "AS02_FindMaxLessThan_Middle", Description = "Target in middle")]
-        [TestCase(new int[] { 15, 5, 20, 40, 30 }, 5, "-1", TestName = "AS02_FindMaxLessThan_Smallest", Description = "Target is smallest")]
-        [TestCase(new int[] { 1, 2, 3 }, 4, "3", TestName = "AS02_FindMaxLessThan_AllLess", Description = "All values less than target")]
-        public void Test_AS02_FindMaxLessThan(int[] array, int target, string expected)
-        {
-            assignment.AS02_FindMaxLessThan(array, target);
+            assignment.ASN01_ReverseString(str);
             string actual = AssignmentDebugConsole.GetOutput().Trim();
-            Assert.AreEqual(expected, actual, $"Expected output is {expected} but actual output is {actual}");
+            TestUtils.AssertMultilineEqual(expected, actual);
         }
 
         [Category("Assignment")]
-        [TestCase(new int[] { 1, 3, 5, 7, 9 }, 4, 8, new int[] { 5, 7 }, TestName = "AS03_FindRange_Basic", Description = "Basic range")]
-        [TestCase(new int[] { 1, 2, 3, 4, 5 }, 6, 10, new int[] { }, TestName = "AS03_FindRange_Empty", Description = "No values in range")]
-        [TestCase(new int[] { 10, 20, 30, 40, 50 }, 10, 50, new int[] { 10, 20, 30, 40, 50 }, TestName = "AS03_FindRange_All", Description = "All values in range")]
-        [TestCase(new int[] { 1, 2, 3, 4, 5 }, 2, 4, new int[] { 2, 3, 4 }, TestName = "AS03_FindRange_Middle", Description = "Range in middle")]
-        [TestCase(new int[] { 5 }, 5, 5, new int[] { 5 }, TestName = "AS03_FindRange_Single", Description = "Single element in range")]
-        public void Test_AS03_FindRange(int[] array, int min, int max, int[] expected)
+        [TestCase("radar", "is a palindrome", TestName = "ASN02_StackPalindrome_Radar", Description = "Radar is palindrome")]
+        [TestCase("hello", "is not a palindrome", TestName = "ASN02_StackPalindrome_Hello", Description = "Hello is not palindrome")]
+        [TestCase("a", "is a palindrome", TestName = "ASN02_StackPalindrome_Single", Description = "Single char is palindrome")]
+        [TestCase("", "is a palindrome", TestName = "ASN02_StackPalindrome_Empty", Description = "Empty string is palindrome")]
+        [TestCase("aba", "is a palindrome", TestName = "ASN02_StackPalindrome_Aba", Description = "Aba is palindrome")]
+        [TestCase("abcba", "is a palindrome", TestName = "ASN02_StackPalindrome_Abcba", Description = "Abcba is palindrome")]
+        [TestCase("ab", "is not a palindrome", TestName = "ASN02_StackPalindrome_Ab", Description = "Ab is not palindrome")]
+        [TestCase("aa", "is a palindrome", TestName = "ASN02_StackPalindrome_Aa", Description = "Aa is palindrome")]
+        public void Test_ASN02_StackPalindrome(string str, string expected)
         {
-            assignment.AS03_FindRange(array, min, max);
-            string output = AssignmentDebugConsole.GetOutput().Trim();
-            if (expected.Length == 0)
-            {
-                Assert.AreEqual("Empty", output, $"Expected Empty but actual {output}");
-            }
-            else
-            {
-                string[] lines = output.Split('\n');
-                int[] actual = lines.Select(int.Parse).ToArray();
-                CollectionAssert.AreEquivalent(expected, actual, $"Expected numbers {string.Join(",", expected)} but actual {string.Join(",", actual)}");
-            }
+            assignment.ASN02_StackPalindrome(str);
+            string actual = AssignmentDebugConsole.GetOutput().Trim();
+            TestUtils.AssertMultilineEqual(expected, actual);
         }
 
         #endregion
@@ -120,28 +109,37 @@ namespace Assignment
         #region Extra
 
         [Category("Extra")]
-        [TestCase(new int[] { 2, 3, 7, 8, 10 }, 15, new int[] { 2, 3, 7 }, TestName = "EX01_FindTargetEnemies_Basic", Description = "Basic case with multiple enemies")]
-        [TestCase(new int[] { 2, 3, 7, 8, 10 }, 3, new int[] { 2 }, TestName = "EX01_FindTargetEnemies_Single", Description = "Mana enough for one enemy")]
-        [TestCase(new int[] { 2, 3, 7, 8, 10 }, 6, new int[] { 2, 3 }, TestName = "EX01_FindTargetEnemies_Two", Description = "Mana enough for two enemies")]
-        [TestCase(new int[] { 1, 2, 3 }, 10, new int[] { 1, 2, 3 }, TestName = "EX01_FindTargetEnemies_All", Description = "Mana enough for all")]
-        [TestCase(new int[] { 5, 10 }, 4, new int[] { }, TestName = "EX01_FindTargetEnemies_None", Description = "Mana not enough for any")]
-        public void Test_EX01_FindTargetEnemies(int[] enemyHPs, int mana, int[] expected)
+        [TestCase("()", "Balanced", TestName = "EX01_ParenthesesChecker_BalancedSimple", Description = "Simple balanced")]
+        [TestCase("([])", "Balanced", TestName = "EX01_ParenthesesChecker_BalancedMixed", Description = "Mixed balanced")]
+        [TestCase("{[()]}", "Balanced", TestName = "EX01_ParenthesesChecker_BalancedNested", Description = "Nested balanced")]
+        [TestCase("", "Balanced", TestName = "EX01_ParenthesesChecker_Empty", Description = "Empty balanced")]
+        [TestCase("(", "Unbalanced", TestName = "EX01_ParenthesesChecker_UnbalancedOpen", Description = "Unbalanced open")]
+        [TestCase(")", "Unbalanced", TestName = "EX01_ParenthesesChecker_UnbalancedClose", Description = "Unbalanced close")]
+        [TestCase("(]", "Unbalanced", TestName = "EX01_ParenthesesChecker_Mismatch", Description = "Mismatch")]
+        [TestCase("([)]", "Unbalanced", TestName = "EX01_ParenthesesChecker_Crossed", Description = "Crossed")]
+        [TestCase("((", "Unbalanced", TestName = "EX01_ParenthesesChecker_MultipleOpen", Description = "Multiple open")]
+        [TestCase("))", "Unbalanced", TestName = "EX01_ParenthesesChecker_MultipleClose", Description = "Multiple close")]
+        public void Test_EX01_ParenthesesChecker(string str, string expected)
         {
-            assignment.EX01_FindTargetEnemies(enemyHPs, mana);
-            string output = AssignmentDebugConsole.GetOutput().Trim();
-            if (expected.Length == 0)
-            {
-                Assert.AreEqual("", output, $"Expected no output but actual {output}");
-            }
-            else
-            {
-                string[] lines = output.Split('\n');
-                int[] actual = lines.Select(int.Parse).ToArray();
-                CollectionAssert.AreEquivalent(expected, actual, $"Expected numbers {string.Join(",", expected)} but actual {string.Join(",", actual)}");
-            }
+            assignment.EX01_ParenthesesChecker(str);
+            string actual = AssignmentDebugConsole.GetOutput().Trim();
+            TestUtils.AssertMultilineEqual(expected, actual);
         }
 
         #endregion
+    }
 
+    public class TestUtils
+    {
+        internal static void AssertMultilineEqual(string expected, string actual, string message = null)
+        {
+            string normExpected = expected.Replace("\r\n", "\n").Replace("\r", "\n").Trim();
+            string normActual = actual.Replace("\r\n", "\n").Replace("\r", "\n").Trim();
+            if (string.IsNullOrEmpty(message))
+            {
+                message = $"Expected output:\n{normExpected}\n----\nActual output:\n{normActual}";
+            }
+            Assert.AreEqual(normExpected, normActual, message);
+        }
     }
 }

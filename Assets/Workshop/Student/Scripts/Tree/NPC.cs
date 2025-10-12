@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC : Identity
 {
     public DialogueUI dialogueUI;
-    public DialogueManager dialogueManager;
+    public DialogueSequen dialogueSeauen;
     public bool canTalk = true;
 
     public override bool Hit()
@@ -13,9 +13,8 @@ public class NPC : Identity
         // ตรวจสอบว่าผู้เล่นมีไอเท็มที่ต้องการหรือไม่
         if (canTalk)
         {
-            dialogueUI.Setup(dialogueManager);
-            DialogueNode currentNode = dialogueManager.tree.root;
-            dialogueUI.ShowDialogue(currentNode);
+            dialogueUI.Setup(dialogueSeauen);
+            dialogueSeauen.dialogueUI = dialogueUI;
             return false;
         }
         else

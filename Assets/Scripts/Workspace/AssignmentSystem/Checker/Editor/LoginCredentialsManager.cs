@@ -1,7 +1,7 @@
-using UnityEngine;
 using System;
-using System.Text;
 using System.Security.Cryptography;
+using System.Text;
+using UnityEngine;
 
 /// <summary>
 /// Manages login credentials storage with encryption for passwords
