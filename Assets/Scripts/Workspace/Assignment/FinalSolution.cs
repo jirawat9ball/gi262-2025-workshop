@@ -29,6 +29,8 @@ namespace Assignment
             var top = stack.Peek();
             Debug.Log($"Peek: {top}");
             Debug.Log($"Count after peek: {stack.Count}");
+
+            stack.Clear();
         }
 
         public void LCT02_QueueSyntax()
@@ -46,6 +48,8 @@ namespace Assignment
             Debug.Log($"Peek: {front}");
 
             Debug.Log($"Count after dequeue: {queue.Count}");
+
+            queue.Clear();
         }
 
         public void LCT03_ActionStack()

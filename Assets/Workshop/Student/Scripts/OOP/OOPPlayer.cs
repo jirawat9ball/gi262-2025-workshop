@@ -53,9 +53,13 @@ namespace Solution
                 {
                     actionHistoryManager.UndoLastMove(this);
                 }
+                if (Input.GetKeyDown(KeyCode.Y))
+                {
+                    actionHistoryManager.RedoLastMove(this);
+                }
 
                 // Input for starting an example auto-move sequence (Q key)
-                if (Input.GetKeyDown(KeyCode.Q) && !isAutoMoving)
+                if (Input.GetKeyDown(KeyCode.Q) && !isAutoMoving)   
                 {
                     actionHistoryManager.StartAutoMoveSequence(this);
                 }

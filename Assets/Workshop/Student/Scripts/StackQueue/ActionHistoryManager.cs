@@ -8,17 +8,13 @@ namespace Solution
     {
         // 1. Undo System using Stack
         private Stack<Vector2> undoStack = new Stack<Vector2>();
+        private Stack<Vector2> redoStack = new Stack<Vector2>();
 
         // 2. Auto-Move System using Queue
         private Queue<Vector2> autoMoveQueue = new Queue<Vector2>();
 
         #region "This Is undoStack Function"
 
-        public void SetUPStartPosition(OOPPlayer player)
-        {
-            Vector2 startPos = new Vector2(player.positionX, player.positionY);
-            SaveStateForUndo(startPos);
-        }
         /// Saves the current player state (position) to the undo stack.
         public void SaveStateForUndo(Vector2 currentPosition)
         {
@@ -27,6 +23,13 @@ namespace Solution
             if (undoStack.Count == 0 || !undoStack.Peek().Equals(currentPosition))
             {
                 undoStack.Push(currentPosition);
+                
+                if (redoStack.Count > 0)
+                {
+                    redoStack.Clear();
+                    Debug.Log("New move detected. Redo stack cleared.");
+                }
+                
                 Debug.Log($"State saved: Position {currentPosition}. Stack size: {undoStack.Count}");
             }
         }
@@ -38,7 +41,8 @@ namespace Solution
             if (undoStack.Count > 1)
             {
                 // Pop the current state
-                undoStack.Pop();
+                Vector2 currentState = undoStack.Pop();
+                redoStack.Push(currentState);
 
                 // Peek at the previous state
                 Vector2 previousState = undoStack.Peek();
@@ -55,6 +59,30 @@ namespace Solution
             else
             {
                 Debug.Log("Cannot undo: No previous states saved.");
+            }
+        }
+        public void RedoLastMove(OOPPlayer player)
+        {
+            if (redoStack.Count > 0)
+            {
+                // 1. ดึงสถานะที่ยกเลิกไปล่าสุดจาก Redo Stack
+                Vector2 stateToRedo = redoStack.Pop();
+
+                // 2. ผลักสถานะนี้เข้า Undo Stack กลับไป
+                undoStack.Push(stateToRedo);
+
+                // 3. อัปเดตตำแหน่งผู้เล่น
+                transform.position = stateToRedo;
+
+                int toX = (int)transform.position.x;
+                int toY = (int)transform.position.y;
+
+                player.UpdatePosition(toX, toY);
+                Debug.Log($"Redo successful! Reverted to position: {stateToRedo}. Undo size: {undoStack.Count}, Redo size: {redoStack.Count}");
+            }
+            else
+            {
+                Debug.Log("Cannot redo: No undone states available.");
             }
         }
         #endregion

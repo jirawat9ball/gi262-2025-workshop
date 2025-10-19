@@ -3,7 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|c:\\users\\user\\onedrive\\desktop\\temp\\unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\stackqueue\\actionhistorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\stackqueue\\actionhistorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\oop\\oopplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\oop\\oopplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7F07E76-0049-6887-B234-2FD712657786}|Workspace.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\scripts\\workspace\\assignment\\finalsolution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7F07E76-0049-6887-B234-2FD712657786}|Workspace.csproj|solutionrelative:assets\\scripts\\workspace\\assignment\\finalsolution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7F07E76-0049-6887-B234-2FD712657786}|Workspace.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\scripts\\workspace\\assignment\\studentsolution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7F07E76-0049-6887-B234-2FD712657786}|Workspace.csproj|solutionrelative:assets\\scripts\\workspace\\assignment\\studentsolution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\npcskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\npcskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\linkedlist\\zombieparade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\linkedlist\\zombieparade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\dialoguesequen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\dialoguesequen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,24 +43,12 @@
       "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\ui\\dialogueui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\dialoguesequen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\dialoguesequen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\dialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\dialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7F07E76-0049-6887-B234-2FD712657786}|Workspace.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\scripts\\workspace\\assignment\\finalsolution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7F07E76-0049-6887-B234-2FD712657786}|Workspace.csproj|solutionrelative:assets\\scripts\\workspace\\assignment\\finalsolution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\tree\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\tree\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\assets\\workshop\\student\\scripts\\oop\\oopplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A34B4A4B-84DE-310D-4B69-66E296A72DDC}|Assembly-CSharp.csproj|solutionrelative:assets\\workshop\\student\\scripts\\oop\\oopplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Dialogue.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\Dialogue.cs",
               "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\Dialogue.cs",
@@ -55,12 +71,61 @@
               "ViewState": "AgIAABIAAAAAAAAAAAAYwA0AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-05T10:44:53.632Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FinalSolution.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Scripts\\Workspace\\Assignment\\FinalSolution.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Workspace\\Assignment\\FinalSolution.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Scripts\\Workspace\\Assignment\\FinalSolution.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Workspace\\Assignment\\FinalSolution.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwBoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T02:07:28.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "NPCSkill.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\NPCSkill.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\NPCSkill.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\NPCSkill.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\NPCSkill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T02:11:14.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ZombieParade.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\LinkedList\\ZombieParade.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\LinkedList\\ZombieParade.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\LinkedList\\ZombieParade.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\LinkedList\\ZombieParade.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T01:53:57.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ActionHistoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\StackQueue\\ActionHistoryManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\StackQueue\\ActionHistoryManager.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\StackQueue\\ActionHistoryManager.cs",
+              "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\StackQueue\\ActionHistoryManager.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T03:57:04.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "SkillBook.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
               "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
@@ -68,12 +133,11 @@
               "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\SkillBook.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T06:52:04.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T06:52:04.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Skill.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\Skill.cs",
               "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\Skill.cs",
@@ -81,37 +145,37 @@
               "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\Skill.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAYwBcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T06:45:22.112Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T06:45:22.112Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FinalSolution.cs",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Scripts\\Workspace\\Assignment\\FinalSolution.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Workspace\\Assignment\\FinalSolution.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Scripts\\Workspace\\Assignment\\FinalSolution.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Workspace\\Assignment\\FinalSolution.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowBQAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T05:21:37.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "OOPPlayer.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\OOP\\OOPPlayer.cs",
               "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\OOP\\OOPPlayer.cs",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\OOP\\OOPPlayer.cs",
               "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\OOP\\OOPPlayer.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAwCoAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAmwDkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T10:48:14.441Z"
+              "WhenOpened": "2025-10-05T10:48:14.441Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "StudentSolution.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Scripts\\Workspace\\Assignment\\StudentSolution.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Workspace\\Assignment\\StudentSolution.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Scripts\\Workspace\\Assignment\\StudentSolution.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Workspace\\Assignment\\StudentSolution.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T04:29:47.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DialogueSequen.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\DialogueSequen.cs",
               "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\DialogueSequen.cs",
@@ -119,12 +183,11 @@
               "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\DialogueSequen.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAYwAkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T10:45:01.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-05T10:45:01.908Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "DialogueUI.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\UI\\DialogueUI.cs",
               "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\UI\\DialogueUI.cs",
@@ -132,12 +195,11 @@
               "RelativeToolTip": "Assets\\Workshop\\Student\\Scripts\\Tree\\UI\\DialogueUI.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwCIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T10:43:48.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-05T10:43:48.111Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "NPC.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Temp\\Unity\\gi262-2025-workshop\\Assets\\Workshop\\Student\\Scripts\\Tree\\NPC.cs",
               "RelativeDocumentMoniker": "Assets\\Workshop\\Student\\Scripts\\Tree\\NPC.cs",
