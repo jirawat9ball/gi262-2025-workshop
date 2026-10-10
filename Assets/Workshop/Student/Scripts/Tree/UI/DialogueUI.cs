@@ -1,6 +1,5 @@
-using System.Collections.Generic;
+Ôªøusing System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +9,11 @@ public class DialogueUI : MonoBehaviour
     public GameObject dialoguePanel;
     public TextMeshProUGUI npcText;
     public Transform choiceContainer;
-    public Button choiceButtonPrefab; // ≈“° Prefab ªÿË¡µ—«‡≈◊Õ°¡“„ Ë
+    public Button choiceButtonPrefab; // ‡∏•‡∏≤‡∏Å Prefab ‡∏õ‡∏∏‡πà‡∏°‡∏ï‡∏±‡∏ß‡πÄ‡∏•‡∏∑‡∏≠‡∏Å‡∏°‡∏≤‡πÉ‡∏™‡πà
     public GameObject closeButtonDialogue;
     private DialogueSequen InterractNpcSequen;
 
-    // ‡°Á∫ªÿË¡∑’Ë∂Ÿ° √È“ß¢÷Èπ ‡æ◊ËÕπ”‰ª∑”≈“¬/´ËÕπ„π¿“¬À≈—ß
+    // ‡πÄ‡∏Å‡πá‡∏ö‡∏õ‡∏∏‡πà‡∏°‡∏ó‡∏µ‡πà‡∏ñ‡∏π‡∏Å‡∏™‡∏£‡πâ‡∏≤‡∏á‡∏Ç‡∏∂‡πâ‡∏ô ‡πÄ‡∏û‡∏∑‡πà‡∏≠‡∏ô‡∏≥‡πÑ‡∏õ‡∏ó‡∏≥‡∏•‡∏≤‡∏¢/‡∏ã‡πà‡∏≠‡∏ô‡πÉ‡∏ô‡∏†‡∏≤‡∏¢‡∏´‡∏•‡∏±‡∏á
     private List<Button> activeButtons = new List<Button>();
 
     public void Setup(DialogueSequen sequen)
@@ -31,13 +30,13 @@ public class DialogueUI : MonoBehaviour
     {
         InterractNpcSequen.currentNode = node;
 
-        // 1. · ¥ß¢ÈÕ§«“¡¢Õß NPC
+        // 1. ‡πÅ‡∏™‡∏î‡∏á‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°‡∏Ç‡∏≠‡∏á NPC
         npcText.text = node.text;
 
-        // 2. ≈È“ßªÿË¡µ—«‡≈◊Õ°‡°Ë“
+        // 2. ‡∏•‡πâ‡∏≤‡∏á‡∏õ‡∏∏‡πà‡∏°‡∏ï‡∏±‡∏ß‡πÄ‡∏•‡∏∑‡∏≠‡∏Å‡πÄ‡∏Å‡πà‡∏≤
         ClearChoices();
 
-        // 3.  √È“ßªÿË¡µ—«‡≈◊Õ°„À¡Ëµ“¡ nexts
+        // 3. ‡∏™‡∏£‡πâ‡∏≤‡∏á‡∏õ‡∏∏‡πà‡∏°‡∏ï‡∏±‡∏ß‡πÄ‡∏•‡∏∑‡∏≠‡∏Å‡πÉ‡∏´‡∏°‡πà‡∏ï‡∏≤‡∏° nexts
         var choices = new List<string>(node.nexts.Keys);
         for (int i = 0; i < choices.Count; i++)
         {
@@ -50,11 +49,11 @@ public class DialogueUI : MonoBehaviour
     {
         Button newButton = Instantiate(choiceButtonPrefab, choiceContainer);
 
-        // µ—Èß§Ë“¢ÈÕ§«“¡∫πªÿË¡
+        // ‡∏ï‡∏±‡πâ‡∏á‡∏Ñ‡πà‡∏≤‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°‡∏ö‡∏ô‡∏õ‡∏∏‡πà‡∏°
         newButton.GetComponentInChildren<TextMeshProUGUI>().text = text;
 
-        // ‡æ‘Ë¡ Listener ‡¡◊ËÕ°¥ªÿË¡
-        // „™È Lambda Expression ‡æ◊ËÕ Ëß index °≈—∫‰ª„ÀÈ DialogueManager
+        // ‡πÄ‡∏û‡∏¥‡πà‡∏° Listener ‡πÄ‡∏°‡∏∑‡πà‡∏≠‡∏Å‡∏î‡∏õ‡∏∏‡πà‡∏°
+        // ‡πÉ‡∏ä‡πâ Lambda Expression ‡πÄ‡∏û‡∏∑‡πà‡∏≠‡∏™‡πà‡∏á index ‡∏Å‡∏•‡∏±‡∏ö‡πÑ‡∏õ‡πÉ‡∏´‡πâ DialogueManager
         newButton.onClick.AddListener(() => OnChoiceSelected(index));
 
         activeButtons.Add(newButton);
@@ -71,7 +70,7 @@ public class DialogueUI : MonoBehaviour
 
     private void OnChoiceSelected(int index)
     {
-        //  Ëß index ¢Õßµ—«‡≈◊Õ°∑’ËºŸÈ‡≈Ëπ‡≈◊Õ°°≈—∫‰ª„ÀÈ DialogueManager ®—¥°“√
+        // ‡∏™‡πà‡∏á index ‡∏Ç‡∏≠‡∏á‡∏ï‡∏±‡∏ß‡πÄ‡∏•‡∏∑‡∏≠‡∏Å‡∏ó‡∏µ‡πà‡∏ú‡∏π‡πâ‡πÄ‡∏•‡πà‡∏ô‡πÄ‡∏•‡∏∑‡∏≠‡∏Å‡∏Å‡∏•‡∏±‡∏ö‡πÑ‡∏õ‡πÉ‡∏´‡πâ DialogueManager ‡∏à‡∏±‡∏î‡∏Å‡∏≤‡∏£
         InterractNpcSequen.SelectChoice(index);
     }
     public void ShowCloseButtonDialog() {

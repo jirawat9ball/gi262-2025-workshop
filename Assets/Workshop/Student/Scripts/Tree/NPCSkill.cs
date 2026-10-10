@@ -1,4 +1,4 @@
-using Solution;
+Ôªøusing Solution;
 using UnityEngine;
 
 public class NPCSkill : Identity
@@ -8,7 +8,7 @@ public class NPCSkill : Identity
 
     public override bool Hit()
     {
-        // µ√«® Õ∫«Ë“ºŸÈ‡≈Ëπ¡’‰Õ‡∑Á¡∑’ËµÈÕß°“√À√◊Õ‰¡Ë
+        // ‡∏ï‡∏£‡∏ß‡∏à‡∏™‡∏≠‡∏ö‡∏ß‡πà‡∏≤‡∏ú‡∏π‡πâ‡πÄ‡∏•‡πà‡∏ô‡∏°‡∏µ‡πÑ‡∏≠‡πÄ‡∏ó‡πá‡∏°‡∏ó‡∏µ‡πà‡∏ï‡πâ‡∏≠‡∏á‡∏Å‡∏≤‡∏£‡∏´‡∏£‡∏∑‡∏≠‡πÑ‡∏°‡πà
         if (canTalk)
         {
             Debug.Log("NPCSkill");

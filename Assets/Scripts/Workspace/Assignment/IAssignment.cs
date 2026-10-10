@@ -1,5 +1,4 @@
-using UnityEngine;
-
+﻿
 namespace Assignment
 {
     public interface IAssignment

@@ -1,6 +1,5 @@
-using System;
+﻿using System;
 using Newtonsoft.Json;
-using UnityEditor.Search;
 using UnityEditor.TestTools.TestRunner.Api;
 
 [System.Serializable]

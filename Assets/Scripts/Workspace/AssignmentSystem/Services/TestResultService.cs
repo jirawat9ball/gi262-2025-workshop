@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using Assignment;
-using Assignment.Core;
 using Assignment.Core.Interfaces;
 using UnityEditor.TestTools.TestRunner.Api;
 using UnityEngine;

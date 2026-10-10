@@ -1,7 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 namespace Solution
 {
     public class ActionHistoryManager : MonoBehaviour
@@ -65,13 +64,13 @@ namespace Solution
         {
             if (redoStack.Count > 0)
             {
-                // 1. �֧ʶҹз��¡��ԡ�����ش�ҡ Redo Stack
+                // 1. ดึงสถานะที่ยกเลิกไปล่าสุดจาก Redo Stack
                 Vector2 stateToRedo = redoStack.Pop();
 
-                // 2. ��ѡʶҹй����� Undo Stack ��Ѻ�
+                // 2. ผลักสถานะนี้เข้า Undo Stack กลับไป
                 undoStack.Push(stateToRedo);
 
-                // 3. �ѻവ���˹觼�����
+                // 3. อัปเดตตำแหน่งผู้เล่น
                 transform.position = stateToRedo;
 
                 int toX = (int)transform.position.x;
@@ -106,7 +105,7 @@ namespace Solution
         {
             player.isAutoMoving = true;
 
-            // 1. ����� Queue: ��ҧ Queue �����������ӴѺ�������͹�������
+            // 1. เตรียม Queue: ล้าง Queue เดิมและเพิ่มลำดับการเคลื่อนที่ใหม่
             autoMoveQueue.Clear();
             foreach (var move in moves)
             {
@@ -115,17 +114,17 @@ namespace Solution
 
             Debug.Log($"Auto-move sequence started with {autoMoveQueue.Count} steps.");
 
-            // 2. �����ż� Queue ���Т�鹵͹
+            // 2. ประมวลผล Queue ทีละขั้นตอน
             while (autoMoveQueue.Count > 0)
             {
-                // �֧��ȷҧ�Ѵ仨ҡ Queue (Dequeue)
+                // ดึงทิศทางถัดไปจาก Queue (Dequeue)
                 Vector2 nextDirection = autoMoveQueue.Dequeue();
 
-                // �ӡ������͹��� (�������� TryMove() ���� Move() ������ʹ�����)
+                // ทำการเคลื่อนที่ (สมมติว่า TryMove() หรือ Move() คือเมธอดที่ใช้)
                 player.Move(nextDirection);
 
-                // �� (Yield) ������ moveDelay �Թҷ� ��͹���Թ��â�鹵͹�Ѵ�
-                // �������繡������͹�����Т�鹵͹
+                // รอ (Yield) เป็นเวลา moveDelay วินาที ก่อนดำเนินการขั้นตอนถัดไป
+                // ทำให้เห็นการเคลื่อนที่ทีละขั้นตอน
                 yield return new WaitForSeconds(0.5f);
             }
             player.isAutoMoving = false;

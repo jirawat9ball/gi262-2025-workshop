@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-using Debug = AssignmentSystem.Services.AssignmentDebugConsole;
+﻿using System;
 
 namespace Assignment
 {

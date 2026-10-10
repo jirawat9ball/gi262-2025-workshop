@@ -1,5 +1,4 @@
-using System;
-using UnityEngine.Rendering;
+﻿using System;
 
 namespace Assignment.Core.Interfaces
 {

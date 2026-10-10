@@ -1,6 +1,5 @@
-using Solution;
+﻿using Solution;
 using System;
-using UnityEngine;
 
 public static class UtilitySortEnemies 
 {

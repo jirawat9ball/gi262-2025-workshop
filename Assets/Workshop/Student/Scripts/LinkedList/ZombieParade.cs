@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,13 +6,13 @@ namespace Solution
 {
     public class ZombieParade : OOPEnemy
     {
-        // �� LinkedList 㹡�èѴ�����ǹ�ͧ�����ͻ���Է���Ҿ㹡������/ź
-        // �� LinkedList 㹡�èѴ�����ǹ�ͧ�����ͻ���Է���Ҿ㹡������/ź
+        // ใช้ LinkedList ในการจัดการส่วนของงูเพื่อประสิทธิภาพในการเพิ่ม/ลบ
+        // ใช้ LinkedList ในการจัดการส่วนของงูเพื่อประสิทธิภาพในการเพิ่ม/ลบ
         private LinkedList<GameObject> Parade = new LinkedList<GameObject>();
         public int SizeParade = 3;
         int timer = 0;
-        public GameObject[] bodyPrefab; // Prefab �ͧ��ǹ�ӵ�ǧ�
-        public float moveInterval = 0.5f; // ��ǧ����㹡������͹��� (0.5 �Թҷ�)
+        public GameObject[] bodyPrefab; // Prefab ของส่วนลำตัวงู
+        public float moveInterval = 0.5f; // ช่วงเวลาในการเคลื่อนที่ (0.5 วินาที)
 
         private Vector3 moveDirection;
 
@@ -20,7 +20,7 @@ namespace Solution
         {
             base.SetUP();
             moveDirection = Vector3.up;
-            // ����� Coroutine ����Ѻ�������͹���
+            // เริ่ม Coroutine สำหรับการเคลื่อนที่
             positionX = (int)transform.position.x;
             positionX = (int)transform.position.y;
             StartCoroutine(MoveParade());
@@ -37,26 +37,26 @@ namespace Solution
 
             return possibleDirections[Random.Range(0, possibleDirections.Count)];
         }
-        // Coroutine ����Ѻ�������͹�����Ъ�ͧ
+        // Coroutine สำหรับการเคลื่อนที่ทีละช่อง
         IEnumerator MoveParade()
         {      
-            //0. ���ҧ��ǧ�
+            //0. สร้างหัวงู
             Parade.AddFirst(this.gameObject);
             while (isAlive)
             {
-                // 1. �֧��ǹ�á�ͧ���͡��
+                // 1. ดึงส่วนแรกของงูออกมา
                 LinkedListNode<GameObject> firstNode = Parade.First;
                 GameObject firstPart = firstNode.Value;
 
-                // 2. �֧��ǹ�ش���¢ͧ���͡��
+                // 2. ดึงส่วนสุดท้ายของงูออกมา
                 LinkedListNode<GameObject> lastNode = Parade.Last;
                 GameObject lastPart = lastNode.Value;
              
-                // 3. ź��ǹ�ش�����͡�ҡ LinkedList
+                // 3. ลบส่วนสุดท้ายออกจาก LinkedList
                 Parade.RemoveLast();
 
-                // 5. ��˹����˹���з�ȷҧ�ͧ��ǹ���١����������
-                // ������������˹觢ͧ��ǹ��ǧ� (����������͹��������ͤ���)
+                // 5. กำหนดตำแหน่งและทิศทางของส่วนที่ถูกย้ายมาใหม่
+                // ให้ไปอยู่ที่ตำแหน่งของส่วนหัวงู (ซึ่งเพิ่งเคลื่อนที่ไปเมื่อครู่)
                 int toX = 0;
                 int toY = 0;
 
@@ -75,7 +75,7 @@ namespace Solution
                     isCollide = IsCollision(toX, toY);
                 }
 
-                //6. ����͹���
+                //6. เคลื่อนที่
                 mapGenerator.mapdata[positionX, positionY] = null;
                 positionX = toX;
                 positionY = toY;
@@ -84,10 +84,10 @@ namespace Solution
                 mapGenerator.mapdata[positionX, positionY] = lastPart.GetComponent<Identity>();
 
 
-                // 7. ������ǹ��鹡�Ѻ��������ǹ����ͧ�ͧ LinkedList
-                // (��觡�����ǹ�á�ͧ�ӵ��)
+                // 7. เพิ่มส่วนนั้นกลับเข้าไปเป็นส่วนที่สองของ LinkedList
+                // (ซึ่งก็คือส่วนแรกของลำตัว)
                 Parade.AddFirst(lastNode);
-                // �͵�����ҷ���˹���͹�������͹�����駵���
+                // รอตามเวลาที่กำหนดก่อนการเคลื่อนที่ครั้งต่อไป
                 if (Parade.Count < SizeParade) {
                     timer++;
                     if (timer > 3)
@@ -101,7 +101,7 @@ namespace Solution
         }
         private bool IsCollision(int x, int y)
         {
-            // 4. ��Ǩ�ͺ��觡մ��ҧ
+            // 4. ตรวจสอบสิ่งกีดขวาง
             if (HasPlacement(x, y))
             {
                 return true;
@@ -109,16 +109,16 @@ namespace Solution
             return false;
         }
         
-        // �ѧ��ѹ����Ѻ������ǹ�ͧ�� (Grow)
+        // ฟังก์ชันสำหรับเพิ่มส่วนของงู (Grow)
         private void Grow()
         {
             GameObject newPart = Instantiate(bodyPrefab[0]);
-            // ��˹����˹�������鹢ͧ��ǹ����������������ǡѺ��ǹ�ش���¢ͧ��
+            // กำหนดตำแหน่งเริ่มต้นของส่วนใหม่ให้อยู่ที่เดียวกับส่วนสุดท้ายของงู
             GameObject lastPart = Parade.Last.Value;
             newPart.transform.position = lastPart.transform.position;
             mapGenerator.SetUpItem(positionX,positionY, newPart, mapGenerator.enemyParent, mapGenerator.enemy);
             //newPart.transform.rotation = lastPart.transform.rotation;
-            // ������ǹ��������� Linked List
+            // เพิ่มส่วนใหม่เข้าไปใน Linked List
             Parade.AddLast(newPart);
         }
 

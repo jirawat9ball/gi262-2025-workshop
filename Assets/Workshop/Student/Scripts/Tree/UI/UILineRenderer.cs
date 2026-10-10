@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.UI;
 
 
@@ -17,17 +17,17 @@ public class UILineRenderer : MaskableGraphic
         if (points == null || points.Length < 1)
             return;
 
-        // **®ÿ¥‡√‘Ë¡µÈπ„À¡Ë:** „™Èµ”·ÀπËß¢Õß GameObject ∑’Ë §√‘ªµÏπ’È·π∫Õ¬ŸË
+        // **‡∏à‡∏∏‡∏î‡πÄ‡∏£‡∏¥‡πà‡∏°‡∏ï‡πâ‡∏ô‡πÉ‡∏´‡∏°‡πà:** ‡πÉ‡∏ä‡πâ‡∏ï‡∏≥‡πÅ‡∏´‡∏ô‡πà‡∏á‡∏Ç‡∏≠‡∏á GameObject ‡∏ó‡∏µ‡πà‡∏™‡∏Ñ‡∏£‡∏¥‡∏õ‡∏ï‡πå‡∏ô‡∏µ‡πâ‡πÅ‡∏ô‡∏ö‡∏≠‡∏¢‡∏π‡πà
         Vector3 startPoint = transform.position;
 
-        // ** √È“ß Vertex Template  ”À√—∫ Beveled Edges (∂È“¡’)**
-        // ‡π◊ËÕß®“°‚§√ß √È“ß°“√«“¥‡ª≈’Ë¬π‰ª (®“°®ÿ¥‡¥’¬«‰ª¬—ßÀ≈“¬®ÿ¥)
-        // Logic °“√ √È“ß Beveled Edges ·∫∫‡¥‘¡Õ“®µÈÕßª√—∫ª√ÿß
-        // „π‚§È¥„À¡Ëπ’È ®–«“¥‡ Èπ®“° startPoint ‰ª¬—ß®ÿ¥·√°„π points[0]
-        // ®“°π—Èπ«“¥‡ Èπ√–À«Ë“ß points[i] °—∫ points[i+1] (∂È“¡’) 
+        // **‡∏™‡∏£‡πâ‡∏≤‡∏á Vertex Template ‡∏™‡∏≥‡∏´‡∏£‡∏±‡∏ö Beveled Edges (‡∏ñ‡πâ‡∏≤‡∏°‡∏µ)**
+        // ‡πÄ‡∏ô‡∏∑‡πà‡∏≠‡∏á‡∏à‡∏≤‡∏Å‡πÇ‡∏Ñ‡∏£‡∏á‡∏™‡∏£‡πâ‡∏≤‡∏á‡∏Å‡∏≤‡∏£‡∏ß‡∏≤‡∏î‡πÄ‡∏õ‡∏•‡∏µ‡πà‡∏¢‡∏ô‡πÑ‡∏õ (‡∏à‡∏≤‡∏Å‡∏à‡∏∏‡∏î‡πÄ‡∏î‡∏µ‡∏¢‡∏ß‡πÑ‡∏õ‡∏¢‡∏±‡∏á‡∏´‡∏•‡∏≤‡∏¢‡∏à‡∏∏‡∏î)
+        // Logic ‡∏Å‡∏≤‡∏£‡∏™‡∏£‡πâ‡∏≤‡∏á Beveled Edges ‡πÅ‡∏ö‡∏ö‡πÄ‡∏î‡∏¥‡∏°‡∏≠‡∏≤‡∏à‡∏ï‡πâ‡∏≠‡∏á‡∏õ‡∏£‡∏±‡∏ö‡∏õ‡∏£‡∏∏‡∏á
+        // ‡πÉ‡∏ô‡πÇ‡∏Ñ‡πâ‡∏î‡πÉ‡∏´‡∏°‡πà‡∏ô‡∏µ‡πâ ‡∏à‡∏∞‡∏ß‡∏≤‡∏î‡πÄ‡∏™‡πâ‡∏ô‡∏à‡∏≤‡∏Å startPoint ‡πÑ‡∏õ‡∏¢‡∏±‡∏á‡∏à‡∏∏‡∏î‡πÅ‡∏£‡∏Å‡πÉ‡∏ô points[0]
+        // ‡∏à‡∏≤‡∏Å‡∏ô‡∏±‡πâ‡∏ô‡∏ß‡∏≤‡∏î‡πÄ‡∏™‡πâ‡∏ô‡∏£‡∏∞‡∏´‡∏ß‡πà‡∏≤‡∏á points[i] ‡∏Å‡∏±‡∏ö points[i+1] (‡∏ñ‡πâ‡∏≤‡∏°‡∏µ) 
 
         // *******************************************************************
-        // ********* 1.  √È“ß Segment ·√°: ®“° transform.position ‰ª¬—ß points[0] *********
+        // ********* 1. ‡∏™‡∏£‡πâ‡∏≤‡∏á Segment ‡πÅ‡∏£‡∏Å: ‡∏à‡∏≤‡∏Å transform.position ‡πÑ‡∏õ‡∏¢‡∏±‡∏á points[0] *********
         // *******************************************************************
         CreateLineSegment(startPoint, points[0].position, vh);
 
@@ -39,30 +39,30 @@ public class UILineRenderer : MaskableGraphic
 
 
         // *******************************************************************
-        // ********* 2.  √È“ß Segment ∂—¥‰ª: ®“° points[i] ‰ª¬—ß points[i+1] *********
+        // ********* 2. ‡∏™‡∏£‡πâ‡∏≤‡∏á Segment ‡∏ñ‡∏±‡∏î‡πÑ‡∏õ: ‡∏à‡∏≤‡∏Å points[i] ‡πÑ‡∏õ‡∏¢‡∏±‡∏á points[i+1] *********
         // *******************************************************************
         for (int i = 0; i < points.Length - 1; i++)
         {
             Vector3 p1 = points[i].position;
             Vector3 p2 = points[i + 1].position;
 
-            //  √È“ß segment √–À«Ë“ß points[i] ·≈– points[i+1]
+            // ‡∏™‡∏£‡πâ‡∏≤‡∏á segment ‡∏£‡∏∞‡∏´‡∏ß‡πà‡∏≤‡∏á points[i] ‡πÅ‡∏•‡∏∞ points[i+1]
             CreateLineSegment(p1, p2, vh);
 
-            // §”π«≥ Index  ”À√—∫ Segment „À¡Ë (‡√‘Ë¡µÈπ∑’Ë Segment 1)
-            // Index  ”À√—∫ Segment 1 ®–‡√‘Ë¡µÈπ∑’Ë vh.currentVertCount °ËÕπ‡√’¬° CreateLineSegment
-            // ‡π◊ËÕß®“° vh.currentVertCount ®–‡∑Ë“°—∫ 5 À≈—ß Segment ·√°∂Ÿ° √È“ß
+            // ‡∏Ñ‡∏≥‡∏ô‡∏ß‡∏ì Index ‡∏™‡∏≥‡∏´‡∏£‡∏±‡∏ö Segment ‡πÉ‡∏´‡∏°‡πà (‡πÄ‡∏£‡∏¥‡πà‡∏°‡∏ï‡πâ‡∏ô‡∏ó‡∏µ‡πà Segment 1)
+            // Index ‡∏™‡∏≥‡∏´‡∏£‡∏±‡∏ö Segment 1 ‡∏à‡∏∞‡πÄ‡∏£‡∏¥‡πà‡∏°‡∏ï‡πâ‡∏ô‡∏ó‡∏µ‡πà vh.currentVertCount ‡∏Å‡πà‡∏≠‡∏ô‡πÄ‡∏£‡∏µ‡∏¢‡∏Å CreateLineSegment
+            // ‡πÄ‡∏ô‡∏∑‡πà‡∏≠‡∏á‡∏à‡∏≤‡∏Å vh.currentVertCount ‡∏à‡∏∞‡πÄ‡∏ó‡πà‡∏≤‡∏Å‡∏±‡∏ö 5 ‡∏´‡∏•‡∏±‡∏á Segment ‡πÅ‡∏£‡∏Å‡∏ñ‡∏π‡∏Å‡∏™‡∏£‡πâ‡∏≤‡∏á
 
-            index = (i + 1) * 5; // Index  ”À√—∫ Segment ∑’Ë i+1 (‡√‘Ë¡µÈπ∑’Ë 5, 10, 15, ...)
+            index = (i + 1) * 5; // Index ‡∏™‡∏≥‡∏´‡∏£‡∏±‡∏ö Segment ‡∏ó‡∏µ‡πà i+1 (‡πÄ‡∏£‡∏¥‡πà‡∏°‡∏ï‡πâ‡∏ô‡∏ó‡∏µ‡πà 5, 10, 15, ...)
 
             // Add the line segment to the triangles array
             vh.AddTriangle(index, index + 1, index + 3);
             vh.AddTriangle(index + 3, index + 2, index);
 
             // These two triangles create the beveled edges
-            // ‚§È¥‡¥‘¡ ”À√—∫ Beveled Edges ¬—ß§ß„™È‰¥È‡æ√“–¡—π„™È index ¢Õß Segment ∑’Ë·≈È« (index - 5)
-            //  ”À√—∫ Segment ·√° (i=0) ®–‡™◊ËÕ¡µËÕ Segment 0 °—∫ Segment 1
-            if (i >= 0) // i = 0 §◊Õ Segment ∑’Ë 1 (‡™◊ËÕ¡ Segment 0)
+            // ‡πÇ‡∏Ñ‡πâ‡∏î‡πÄ‡∏î‡∏¥‡∏°‡∏™‡∏≥‡∏´‡∏£‡∏±‡∏ö Beveled Edges ‡∏¢‡∏±‡∏á‡∏Ñ‡∏á‡πÉ‡∏ä‡πâ‡πÑ‡∏î‡πâ‡πÄ‡∏û‡∏£‡∏≤‡∏∞‡∏°‡∏±‡∏ô‡πÉ‡∏ä‡πâ index ‡∏Ç‡∏≠‡∏á Segment ‡∏ó‡∏µ‡πà‡πÅ‡∏•‡πâ‡∏ß (index - 5)
+            // ‡∏™‡∏≥‡∏´‡∏£‡∏±‡∏ö Segment ‡πÅ‡∏£‡∏Å (i=0) ‡∏à‡∏∞‡πÄ‡∏ä‡∏∑‡πà‡∏≠‡∏°‡∏ï‡πà‡∏≠ Segment 0 ‡∏Å‡∏±‡∏ö Segment 1
+            if (i >= 0) // i = 0 ‡∏Ñ‡∏∑‡∏≠ Segment ‡∏ó‡∏µ‡πà 1 (‡πÄ‡∏ä‡∏∑‡πà‡∏≠‡∏° Segment 0)
             {
                 vh.AddTriangle(index, index - 1, index - 3);
                 vh.AddTriangle(index + 1, index - 1, index - 2);
@@ -78,7 +78,7 @@ public class UILineRenderer : MaskableGraphic
     /// <param name="vh">The vertex helper that the segment is added to</param>
     private void CreateLineSegment(Vector3 point1, Vector3 point2, VertexHelper vh)
     {
-        // °“√∑”ß“π¿“¬„π¬—ß§ß‡À¡◊Õπ‡¥‘¡ ‡æ√“–®ÿ¥ª√– ß§Ï§◊Õ°“√ √È“ß segment ®“° 2 ®ÿ¥∑’Ë„ÀÈ¡“
+        // ‡∏Å‡∏≤‡∏£‡∏ó‡∏≥‡∏á‡∏≤‡∏ô‡∏†‡∏≤‡∏¢‡πÉ‡∏ô‡∏¢‡∏±‡∏á‡∏Ñ‡∏á‡πÄ‡∏´‡∏°‡∏∑‡∏≠‡∏ô‡πÄ‡∏î‡∏¥‡∏° ‡πÄ‡∏û‡∏£‡∏≤‡∏∞‡∏à‡∏∏‡∏î‡∏õ‡∏£‡∏∞‡∏™‡∏á‡∏Ñ‡πå‡∏Ñ‡∏∑‡∏≠‡∏Å‡∏≤‡∏£‡∏™‡∏£‡πâ‡∏≤‡∏á segment ‡∏à‡∏≤‡∏Å 2 ‡∏à‡∏∏‡∏î‡∏ó‡∏µ‡πà‡πÉ‡∏´‡πâ‡∏°‡∏≤
         Vector3 offset = center ? (rectTransform.sizeDelta / 2) : Vector2.zero;
 
         // Create vertex template

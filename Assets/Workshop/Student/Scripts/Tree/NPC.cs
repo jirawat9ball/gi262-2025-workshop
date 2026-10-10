@@ -1,5 +1,4 @@
-using Solution;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
+Ôªøusing Solution;
 using UnityEngine;
 
 public class NPC : Identity
@@ -10,7 +9,7 @@ public class NPC : Identity
 
     public override bool Hit()
     {
-        // µ√«® Õ∫«Ë“ºŸÈ‡≈Ëπ¡’‰Õ‡∑Á¡∑’ËµÈÕß°“√À√◊Õ‰¡Ë
+        // ‡∏ï‡∏£‡∏ß‡∏à‡∏™‡∏≠‡∏ö‡∏ß‡πà‡∏≤‡∏ú‡∏π‡πâ‡πÄ‡∏•‡πà‡∏ô‡∏°‡∏µ‡πÑ‡∏≠‡πÄ‡∏ó‡πá‡∏°‡∏ó‡∏µ‡πà‡∏ï‡πâ‡∏≠‡∏á‡∏Å‡∏≤‡∏£‡∏´‡∏£‡∏∑‡∏≠‡πÑ‡∏°‡πà
         if (canTalk)
         {
             dialogueUI.Setup(dialogueSeauen);

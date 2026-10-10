@@ -1,6 +1,6 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Collections; // ��ҧ�ԧ�֧ Namespace �ͧ SkillBook
+using System.Collections; // อ้างอิงถึง Namespace ของ SkillBook
 
 public class SkillTreeUI : MonoBehaviour
 {
@@ -9,22 +9,22 @@ public class SkillTreeUI : MonoBehaviour
     [Header("Required References")]
     public SkillBook skillBook;
     public SkillNodeUI skillNodePrefab;
-    public Transform skillNodeContainer; // ���˹觷����ҧ Node UI
+    public Transform skillNodeContainer; // ตำแหน่งที่จะวาง Node UI
 
-    // **��ǹ����������������Ѻ��èѴ��� Scroll View Content**
-    public RectTransform contentSkill; // �ҡ Content RectTransform �ͧ Scroll View �����
+    // **ส่วนที่เพิ่มเข้ามาสำหรับการจัดการ Scroll View Content**
+    public RectTransform contentSkill; // ลาก Content RectTransform ของ Scroll View มาใส่
 
-    // ���������Ѻ�Դ����ͺࢵ�ͧ Skill Node ���١���ҧ
+    // ตัวแปรสำหรับติดตามขอบเขตของ Skill Node ที่ถูกสร้าง
     private float minX = 0f;
     private float maxX = 0f;
     private float minY = 0f;
-    private float maxY = 0f; // ���ͧ�ҡ Y ���繤��ź
+    private float maxY = 0f; // เนื่องจาก Y จะเป็นค่าลบ
 
-    // ��˹���Ҵ Node ���������ҧ�������ӹǳ���¢��
+    // กำหนดขนาด Node และระยะห่างเพื่อให้คำนวณง่ายขึ้น
     private readonly float NODE_WIDTH = 150f;
     private readonly float NODE_HEIGHT = 150f;
-    private readonly float X_SPACING = 300f; // ������ҧ��������ҧ Node
-    private readonly float Y_SPACING = 200f; // ������ҧ��������ҧ���
+    private readonly float X_SPACING = 300f; // ระยะห่างรวมระหว่าง Node
+    private readonly float Y_SPACING = 200f; // ระยะห่างรวมระหว่างชั้น
 
     private Dictionary<Skill, SkillNodeUI> skillUIMap = new Dictionary<Skill, SkillNodeUI>();
     void Awake()
@@ -38,7 +38,7 @@ public class SkillTreeUI : MonoBehaviour
     {
         if (skillBook == null || contentSkill == null)
         {
-            Debug.LogError("SkillBook ���� ContentSkill reference is missing!");
+            Debug.LogError("SkillBook หรือ ContentSkill reference is missing!");
             return;
         }
 
@@ -48,18 +48,18 @@ public class SkillTreeUI : MonoBehaviour
     }
     IEnumerator DelayShowTree() {
         yield return new WaitForSeconds(0.1f);
-        // ���絢ͺࢵ�������
+        // รีเซ็ตขอบเขตเริ่มต้น
         minX = 0f;
         maxX = 0f;
         minY = 0f;
         maxY = 0f;
-        // ��������ҧ UI Nodes �������ҡ Skill Tree (�����˹�������� 0, 0)
+        // เริ่มสร้าง UI Nodes ทั้งหมดจาก Skill Tree (ที่ตำแหน่งเริ่มต้น 0, 0)
         CreateAllSkillNodes(skillBook.attackSkillTree.rootSkill, Vector2.zero);
 
-        // **�ӹǳ��С�˹���Ҵ Content �ͧ Scroll View**
+        // **คำนวณและกำหนดขนาด Content ของ Scroll View**
         CalculateAndSetContentSize();
 
-        // �ѻവ UI �����á
+        // อัปเดต UI ครั้งแรก
         RefreshAllUI();
     }
 
@@ -67,53 +67,53 @@ public class SkillTreeUI : MonoBehaviour
     {
         if (skillUIMap.Count == 0) return;
 
-        // �ӹǳ�������ҧ: �ҡ�����ش�֧����ش (�ǡ�ͺ��硹���)
-        float contentWidth = (maxX - minX) + NODE_WIDTH + 50f; // +50f ��� Margin
+        // คำนวณความกว้าง: จากซ้ายสุดถึงขวาสุด (บวกขอบเล็กน้อย)
+        float contentWidth = (maxX - minX) + NODE_WIDTH + 50f; // +50f คือ Margin
 
-        // �ӹǳ�����٧: �ҡ�ش�٧�ش (0) �֧�ش����ش (minY) (�ǡ�ͺ��硹���)
-        // ���ͧ�ҡ��� minY ���繤��ź ������������ó�
-        float contentHeight = Mathf.Abs(minY) + NODE_HEIGHT + 50f; // +50f ��� Margin
+        // คำนวณความสูง: จากจุดสูงสุด (0) ถึงจุดต่ำสุด (minY) (บวกขอบเล็กน้อย)
+        // เนื่องจากค่า minY จะเป็นค่าลบ เราใช้ค่าสัมบูรณ์
+        float contentHeight = Mathf.Abs(minY) + NODE_HEIGHT + 50f; // +50f คือ Margin
 
-        // ��˹���Ҵ���Ѻ RectTransform �ͧ Content
+        // กำหนดขนาดให้กับ RectTransform ของ Content
         contentSkill.sizeDelta = new Vector2(contentWidth, contentHeight);
 
-        // �����˵�: ����Ѻ Scroll View �ǵ�駷�� Node �١�ҧ�ҡ��ŧ��ҧ (Y ��ź) 
-        // ��õ�駤�� Anchor/Pivot �ͧ contentSkill �� Top-Left (0, 1) 
-        // ��������äӹǳ�����٧�ӧҹ�����ҧ�١��ͧ
+        // หมายเหตุ: สำหรับ Scroll View แนวตั้งที่ Node ถูกวางจากบนลงล่าง (Y เป็นลบ) 
+        // ควรตั้งค่า Anchor/Pivot ของ contentSkill เป็น Top-Left (0, 1) 
+        // เพื่อให้การคำนวณความสูงทำงานได้อย่างถูกต้อง
     }
 
     /// <summary>
-    /// ǹ����������ҧ Skill Node UI ����ӴѺ���
+    /// วนซ้ำเพื่อสร้าง Skill Node UI ตามลำดับชั้น
     /// </summary>
     private void CreateAllSkillNodes(Skill currentSkill, Vector2 position)
     {
         if (skillUIMap.ContainsKey(currentSkill)) return;
 
-        // 1. ���ҧ Node UI
+        // 1. สร้าง Node UI
         SkillNodeUI newNode = Instantiate(skillNodePrefab, skillNodeContainer);
         newNode.Initialize(currentSkill);
         skillUIMap.Add(currentSkill, newNode);
 
-        // ��˹����˹�
+        // กำหนดตำแหน่ง
         RectTransform rt = newNode.GetComponent<RectTransform>();
         rt.localPosition = position;
 
-        // 2. �Դ����ͺࢵ�ͧ Node ���١���ҧ���
+        // 2. ติดตามขอบเขตของ Node ที่ถูกสร้างขึ้น
         float nodeHalfWidth = NODE_WIDTH / 2f;
         float nodeHalfHeight = NODE_HEIGHT / 2f;
 
         minX = Mathf.Min(minX, position.x - nodeHalfWidth);
         maxX = Mathf.Max(maxX, position.x + nodeHalfWidth);
-        // ���ͧ�ҡ Y ������ҡ 0 ���Ŵŧ (��ź)
+        // เนื่องจาก Y เริ่มจาก 0 และลดลง (เป็นลบ)
         minY = Mathf.Min(minY, position.y - nodeHalfHeight);
         maxY = Mathf.Max(maxY, position.y + nodeHalfHeight);
 
 
-        // 3. ���ҧ Node ����Ѻ Skill �Ѵ���ӴѺ��� (�١)
+        // 3. สร้าง Node สำหรับ Skill ถัดไปในลำดับชั้น (ลูก)
 
         int numChildren = currentSkill.nextSkills.Count;
 
-        // �ӹǳ���˹�������鹢ͧ�١���á ������� Node �����������觡�ҧ
+        // คำนวณตำแหน่งเริ่มต้นของลูกคนแรก เพื่อให้ Node ทั้งหมดอยู่กึ่งกลาง
         float totalWidth = (numChildren - 1) * X_SPACING;
         float startX = position.x - (totalWidth / 2f);
 
@@ -121,10 +121,10 @@ public class SkillTreeUI : MonoBehaviour
         {
             Skill nextSkill = currentSkill.nextSkills[i];
 
-            // ���˹��١�Ѵ仨������ҡ startX ��������
+            // ตำแหน่งลูกถัดไปจะเพิ่มจาก startX ไปเรื่อยๆ
             Vector2 nextPos = new Vector2(
                 startX + (i * X_SPACING),
-                position.y - Y_SPACING // ŧ�˹�觪��
+                position.y - Y_SPACING // ลงไปหนึ่งชั้น
             );
 
             CreateAllSkillNodes(nextSkill, nextPos);
@@ -143,6 +143,6 @@ public class SkillTreeUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    // �Ҩ���� Logic ����Ѻ����Ҵ����������� (Lines) �����ҧ Node ������
-    // ��觵�ͧ�� Component �� UILineRenderer ���� UI.Graphic ����˹��ͧ
+    // อาจเพิ่ม Logic สำหรับการวาดเส้นเชื่อมต่อ (Lines) ระหว่าง Node ได้ที่นี่
+    // ซึ่งต้องใช้ Component เช่น UILineRenderer หรือ UI.Graphic ที่กำหนดเอง
 }
